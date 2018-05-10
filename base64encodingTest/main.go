@@ -6,6 +6,7 @@ import (
 "log"
 )
 
+// 先把字符串改成字节流以后，再在流上进行编解码
 func main() {
 	// 初始的字符串是 utf-8的 编码
 	input := []byte("hello golang base64 王者天下 http://baidu.com +~")
