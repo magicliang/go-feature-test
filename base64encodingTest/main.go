@@ -10,6 +10,7 @@ func main() {
 	// 初始的字符串是 utf-8的 编码
 	input := []byte("hello golang base64 王者天下 http://baidu.com +~")
 
+	// base64 字符串才是真正的中间形式。encodeTo, decodeFrom。
 	// encode 是字节 to string。
 	encodeString := base64.StdEncoding.EncodeToString(input)
 	// base 64 字符串是人类不可读的
