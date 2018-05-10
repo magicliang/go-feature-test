@@ -6,17 +6,17 @@ import (
 "log"
 )
 
-// 先把字符串改成字节流以后，再在流上进行编解码
 func main() {
 	// 初始的字符串是 utf-8的 编码
 	input := []byte("hello golang base64 王者天下 http://baidu.com +~")
 
-	// 演示base64编码
+	// encode 是字节 to string。
 	encodeString := base64.StdEncoding.EncodeToString(input)
 	// base 64 字符串是人类不可读的
 	fmt.Println("encodeString: " + encodeString)
 	// encodeString: aGVsbG8gZ29sYW5nIGJhc2U2NCDnjovogIXlpKnkuIsgaHR0cDovL2JhaWR1LmNvbSArfg==
 
+	// decode 是string to 字节。解码的结果反而不是字符串。
 	// 对上面的编码结果进行base64解码
 	decodeBytes, err := base64.StdEncoding.DecodeString(encodeString)
 	if err != nil {
