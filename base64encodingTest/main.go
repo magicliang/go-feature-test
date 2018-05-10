@@ -46,6 +46,7 @@ func main() {
 	// 解码后的字符串还是人类刻度的
 	fmt.Println("string(uDec):" + string(uDec))
 
-	// 然而base64 是不同于 urlencode，它是用来传输二进制数据的。可以看出urlencode才更适合url使用。urlencode可以转义url敏感字符而base64不可以：
+	// 然而base64 是不同于 urlencode，它是用来传输二进制数据的（换言之所有的二进制字节都可以转化为base64编码，base64编码是为了和字节转换准备的，而不是和字符串转换做准备的）。
+	// 可以看出urlencode才更适合url使用。urlencode可以转义url敏感字符而base64不可以。url的编码反而是字符串和字符串
 	// https://segmentfault.com/q/1010000010231231
 }
